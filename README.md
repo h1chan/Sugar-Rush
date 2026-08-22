@@ -129,7 +129,7 @@ Keep a copy of the license when forking.
 ## 👤 Author
 
 <!-- 👇 СВОИ ДАННЫЕ ЗДЕСЬ -->
-h1chan / Handle — [GitHub](https://github.com/h1chan) · [Discord](https://discord.com/users/1064052965247295518)
+h1chan — [GitHub](https://github.com/h1chan) · [Discord](https://discord.com/users/1064052965247295518)
 
 ---
 
