@@ -32,7 +32,7 @@
             <div class="nav__menu" id="nav-menu">
                <ul class="nav__list">
                   <li>
-                     <a href="#home" class="nav__link">Home</a>
+                     <a href="#home" class="nav__link active-link">Home</a>
                   </li>
 
                   <li>
@@ -78,7 +78,9 @@
                   </h1>
 
                   <p class="home__description">
-                     We create handcrafted cakes made with love, premium ingredients, and a touch of magic. Because life's sweetest moments deserve to be celebrated in a special way.
+                     We Create handrafted cakes made with love, premium ingredients,
+                     and a touch of magic. Because life's sweetest moments deserve to be
+                     celebrated in a special way.
                   </p>
 
                   <a href="#new" class="button">Explore our cakes</a>
@@ -126,7 +128,7 @@
             <img src="assets/img/about-cupcake-1.png" alt="" class="about__cupcake-1">
             <img src="assets/img/about-cupcake-2.png" alt="" class="about__cupcake-2">
 
-            <div class="about__container grid container">
+            <div class="about__container container grid">
                <div class="about__data">
                   <h2 class="section__title">
                      Our Passion For <br> Baking Cakes
@@ -157,7 +159,7 @@
          <!--==================== PRODUCTS SECTION ====================-->
          <section class="product section" id="product">
             <h2 class="section__title">
-               Our Products
+               Our products
             </h2>
 
             <div class="product__container container">
@@ -446,8 +448,6 @@
                   </p>
 
                   <a href="#contact" class="button">Order your cake now</a>
-
-
                </div>
 
                <div class="new__images">
@@ -464,32 +464,33 @@
 
                   <div class="new__swiper swiper">
                      <div class="swiper-wrapper">
-                        <article class="new__article swiper-slide">
+                        <article class="new__articles swiper-slide">
                            <img src="assets/img/new-cake-1.png" alt="Delicious decorated cake" class="new__cake">
                            <h3 class="new__name">Premium Chocolate Cake</h3>
                         </article>
 
-                        <article class="new__article swiper-slide">
+                        <article class="new__articles swiper-slide">
                            <img src="assets/img/new-cake-2.png" alt="Delicious decorated cake" class="new__cake">
                            <h3 class="new__name">Premium Vanilla Cake</h3>
                         </article>
 
-                        <article class="new__article swiper-slide">
+                        <article class="new__articles swiper-slide">
                            <img src="assets/img/new-cake-3.png" alt="Delicious decorated cake" class="new__cake">
                            <h3 class="new__name">Premium Cherry Cake</h3>
                         </article>
 
-                        <article class="new__article swiper-slide">
+                        <article class="new__articles swiper-slide">
                            <img src="assets/img/new-cake-4.png" alt="Delicious decorated cake" class="new__cake">
                            <h3 class="new__name">Premium Blueberry Cake</h3>
                         </article>
 
-                        <article class="new__article swiper-slide">
+                        <article class="new__articles swiper-slide">
                            <img src="assets/img/new-cake-5.png" alt="Delicious decorated cake" class="new__cake">
                            <h3 class="new__name">Premium Raspberry Cake</h3>
                         </article>
                      </div>
-                     <!-- Navigation Buttons -->
+
+                     <!--Navigation buttons-->
                      <div class="swiper-button-prev"><i class="ri-arrow-left-long-line"></i></div>
                      <div class="swiper-button-next"><i class="ri-arrow-right-long-line"></i></div>
                   </div>
@@ -568,11 +569,42 @@
 
       <!--==================== FOOTER ====================-->
       <footer class="footer">
-         
+         <div class="footer__container container grid">
+            <a href="/index.html" class="footer__logo">Delizia</a>
+
+            <ul class="footer__social">
+               <li>
+                  <a href="" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="footer__social-link">
+                     <i class="ri-facebook-circle-line"></i>
+                  </a>
+               </li>
+
+               <li>
+                  <a href="" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="footer__social-link">
+                     <i class="ri-instagram-line"></i>
+                  </a>
+               </li>
+
+               <li>
+                  <a href="" target="_blank" rel="noopener noreferrer" aria-label="X" class="footer__social-link">
+                     <i class="ri-twitter-x-line"></i>
+                  </a>
+               </li>
+            </ul>
+
+            <smal class="footer__copy">&#169; All Rights Reserved By Eyephoria</smal>
+
+            <img src="assets/img/leaf-1.png" alt="" class="footer__leaf-1">
+            <img src="assets/img/leaf-2.png" alt="" class="footer__leaf-2">
+         </div>
+
+         <img src="assets/img/footer-blob.svg" alt="" class="footer__blob">
       </footer>
 
       <!--========== SCROLL UP ==========-->
-      
+      <a href="#" class="scrollup" id="scroll-up">
+         <i class="ri-arrow-up-line"></i>
+      </a>
 
       <!--=============== SCROLLREVEAL - Insert link for animations ===============-->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.min.js"></script>
