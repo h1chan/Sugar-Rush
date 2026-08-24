@@ -161,7 +161,7 @@ img {
 .nav__logo span {
   font-family: var(--second-font);
   font-size: var(--h3-font-size);
-  color: var(--title-color)
+  color: var(--title-color);
 }
 
 .nav__toggle{
@@ -266,7 +266,7 @@ bottom: 1.5rem;
 .home__slice-1{
   width: 50px;
   left: -2rem;
-  top: -2rem
+  top: -2rem;
 }
 
 .home__slice-2{
@@ -590,12 +590,209 @@ bottom: 1.5rem;
 }
 
 /*=============== NEW SECTION ===============*/
+.new__container{
+  row-gap: 5rem;
+  padding-bottom: 3rem;
+}
+
+.new__data{
+  text-align: center;
+}
+
+.new__description{
+  margin-bottom: 1.5rem;
+}
+
+.new__images{
+  position: relative;
+  display: grid;
+  justify-self: center;
+}
+
+.new__titles{
+  position: absolute;
+  top: -1.5rem;
+  justify-self: center;
+}
+
+.new__text{
+  font-size: 3.5rem;
+  font-weight: var(--font-bold);
+  line-height: 120%;
+  opacity: .1;
+}
+
+.new__cake{
+  width: 220px;
+  margin: auto;
+  transition: filter .4s;
+}
+
+.new__name{
+  position: absolute;
+  text-align: center;
+  font-size: var(--h1-font-size);
+  padding-block: 1rem;
+  opacity: 0;
+  transition: opacity .4s;
+}
+
+.new__leaf-1,
+.new__leaf-2,
+.new__leaf-3{
+  position: absolute;
+}
+
+.new__leaf-1{
+  width: 50px;
+  top: 0;
+  right: 1.5rem;
+}
+
+.new__leaf-2{
+  width: 50px;
+  left: 2.5rem;
+  bottom: .6rem;
+  filter: blur(2px);
+}
+
+.new__leaf-3{
+  width: 80px;
+  top: -3rem;
+  left: 2rem;
+}
 
 
 /* Swiper class */
+.new__swiper{
+  width: 100%;
+  height: 100%;
+  margin-inline: auto;
+  padding-bottom: 3rem;
+}
+
+.new .swiper-slide-active .new__cake{
+  filter: drop-shadow(0 8px 16px hsla(350, 70%, 8%, .2));
+}
+
+.new .swiper-slide-active .new__name{
+  opacity: 1;
+}
+
+.new .swiper-navigation-icon{
+  display: none;
+}
+
+.new :is(.swiper-button-prev, .swiper-button-next){
+  top: initial;
+  left: initial;
+  bottom: 0;
+  margin: initial;
+  width: 40px;
+  height: 40px;
+  background-color: var(--white-color);
+  border-radius: .75rem;
+  color: var(--title-color);
+  font-size: 1.5rem;
+  transition: background-color .4s; 
+}
+
+.new :is(.swiper-button-prev:hover, .swiper-button-next:hover){
+  background-color: var(--first-color);
+}
+
+.new .swiper-button-prev{
+  left:calc(50% - 3rem)
+}
+
+.new .swiper-button-next{
+  right: calc(50% - 3rem);
+}
 
 
 /*=============== CONTACT SECTION ===============*/
+.contact{
+  background-color: var(--second-color);
+}
+
+.contact__container{
+  row-gap: 3rem;
+  padding-bottom: 3rem;
+}
+
+.contact__map iframe{
+  width: 100%;
+  height: 100%;
+}
+
+.contact__map{
+  width: 320px;
+  height: 280px;
+  justify-self: center;
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+
+.section__title{
+  color: var(--white-color);
+}
+
+.contact__data{
+  position: relative;
+  text-align: center;
+  display: grid;
+  row-gap: 2rem;
+}
+
+.contact__title{
+  color: var(--first-color);
+  font-size: var(--h3-font-size);
+  margin-bottom: .5rem;
+}
+
+.contact__address,
+.contact__address :is(span, a){
+  display: block;
+  color: white;
+  font-style: normal;
+}
+
+.contact__social{
+  display: flex;
+  justify-content: center;
+  column-gap: .75rem;
+}
+
+.contact__social-link{
+  color: var(--white-color);
+  font-size: 1.5rem;
+  transition: color .4s;
+}
+
+.contact__social-link:hover{
+  color: var(--first-color);
+}
+
+.contact__data img{
+  position: absolute;
+  width: 30px;
+}
+
+.contact__sticker-1{
+  right: 2rem;
+  top: 1rem;
+}
+
+.contact__sticker-2{
+  top: 6rem;
+  left: 3rem;
+}
+
+.contact__sticker-3{
+  right: 3rem;
+  bottom: -1rem;
+}
+
 
 
 /*=============== FOOTER ===============*/
@@ -617,12 +814,18 @@ bottom: 1.5rem;
     width: 250px;
     height: 290px;
   }
+
+  .contact__map{
+    width: 100%;
+  }
 }
 
 /* For medium devices <> */
 @media (width >= 540px){
   .home__container,
-  .about__container{
+  .about__container,
+  .new__container,
+  .contact__data{
   grid-template-columns: 400px;
   justify-content: center;
   }
@@ -791,7 +994,7 @@ bottom: 1.5rem;
   }
 
   .product .section__title{
-    margin-bottom: 3.rem;
+    margin-bottom: 3rem;
   }
   .product__tabs .swiper-wrapper{
     column-gap: 1.5rem;
@@ -801,7 +1004,7 @@ bottom: 1.5rem;
     font-size: var(--normal-font-size);
     padding: .75rem 1.25rem;
   }
-  .product__content .swiper{
+  .product__content.swiper{
     width: 1150px;
     padding-block: 3rem;
     overflow: hidden;
@@ -832,6 +1035,91 @@ bottom: 1.5rem;
   .product__buy{
     top: 1.5rem;
     right: 1.5rem;
+  }
+
+  .new__container{
+    grid-template-columns: 400px 640px;
+    column-gap: 5rem;
+    align-items: center;
+    padding-block: 3rem 4rem;
+  }
+
+  .new__data .section__title,
+  .new__data{
+    text-align: initial;
+  }
+  .new__description{
+    margin-bottom: 4rem;
+  }
+  .new__text{
+    font-size: 6rem;
+  }
+  .new__titles{
+    top: -5rem;
+  }
+  .new__cake{
+    width: 420px;
+  }
+  .new__name{
+    padding-block: 2rem 3rem;
+  }
+  .new__leaf-1{
+    width: 90px;
+    right: 4rem;
+  }
+  .new__leaf-2{
+    width: 90px;
+    left: 5rem;
+    bottom: 9rem;
+  }
+  .new__leaf-3{
+    width: 130px;
+    top: -4rem;
+    left: 4rem;
+  }
+
+  .contact__container{
+    grid-template-columns: 500px 520px;
+    column-gap: 6rem;
+    align-items: center;
+    padding-bottom: 8rem;
+  }
+  .contact__map{
+    order: -1;
+    width: 500px;
+    height: 440px;
+    border-radius: 3rem;
+  }
+  .contact__content .section__title{
+    text-align: initial;
+    margin-bottom: 3rem;
+  }
+  .contact__data{
+    grid-template-columns: repeat(2, max-content);
+    justify-content: initial;
+    gap: 4rem 6rem
+  }
+  .contact__info{
+    text-align: initial;
+  }
+  .contact__title{
+    font-size: var(--h2-font-size);
+    margin-bottom: 1rem;
+  }
+  .contact__data img{
+    width: 40px;
+  }
+  .contact__sticker-1{
+    right: -2rem;
+    top: 0;
+  }
+  .contact__sticker-2{
+    top: -2rem;
+    left: -4rem;
+  }
+  .contact__sticker-3{
+    right: 14rem;
+    bottom: -5rem;
     
   }
 }
