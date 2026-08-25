@@ -45,17 +45,33 @@ const swiperHome = new Swiper('.home__swiper', {
          opacity: 0,
       },
    },
-   // autoplay: {
-   //    delay: 3000,
-   //    disableOnInteraction: false
-   // },
+   autoplay: {
+      delay: 3000,
+      disableOnInteraction: false
+   },
 })
 
 /*=============== CHANGE HEADER STYLES ===============*/
-
+const scrollHeader = () =>{
+   const header = document.getElementById('header')
+   // Add the .scroll-header class if the bottom scroll of the viewport is greater than 50
+   this.scrollY >= 50 ? header.classList.add('scroll-header') 
+                      : header.classList.remove('scroll-header')
+}
+window.addEventListener('scroll', scrollHeader)
 
 /*=============== PRODUCTS SWIPER ===============*/
+const swiperTabs = new Swiper('.product__tabs', {
+   slidesPerView: 'auto',
+})
 
+const swiperProducts = new Swiper('.product__content', {
+   loop: true,
+   spaceBetween: 32,
+   thumbs: {
+      swiper: swiperTabs,
+   }
+})
 
 /*=============== NEW SWIPER ===============*/
 
