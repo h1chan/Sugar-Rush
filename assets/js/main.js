@@ -29,26 +29,26 @@ navLink.forEach(n => n.addEventListener('click', linkAction))
 
 /*=============== HOME SWIPER ===============*/
 const swiperHome = new Swiper('.home__swiper', {
-    loop: true,
-    grabCursor: true,
-    speed: 800,
-    effect: 'creative',
-    creativeEffect: {
-        prev: {
-            translate: ['-120%', 0, -500],
-            rotate: [0, 0, -45],
-            opacity: 0,
-        },
-        next: {
-            translate: ['120%', 0, -500],
-            rotate: [0, 0, 45],
-            opacity: 0,
-        },
+   loop: true,
+   grabCursor: true,
+   speed: 800,
+   effect: 'creative',
+   creativeEffect: {
+      prev: {
+         translate: ['-120%', 0, -500],
+         rotate: [0, 0, -45],
+         opacity: 0,
+      },
+      next: {
+         translate: ['120%', 0, -500],
+         rotate: [0, 0, 45],
+         opacity: 0,
+      },
     },
     autoplay: {
-        delay: 3000,
-        disableOnInterAction: false,
-    }
+       delay: 3000,
+       disableOnInteraction: false 
+    },
 })
 
 /*=============== CHANGE HEADER STYLES ===============*/
@@ -61,17 +61,7 @@ const scrollHeader = () =>{
 window.addEventListener('scroll', scrollHeader)
 
 /*=============== PRODUCTS SWIPER ===============*/
-const swiperTabs = new Swiper('.product__tabs', {
-  slidesPerView: 'auto',
-})
 
-const swiperProducts = new Swiper('.product__content', {
-  loop: true,
-  spaceBetween: 32,
-  thumbs: {
-    swiper: swiperTabs,
-  }
-})
 
 /*=============== NEW SWIPER ===============*/
 
