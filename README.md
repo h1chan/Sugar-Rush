@@ -4,6 +4,14 @@
 > Vanilla HTML/CSS/JS, Swiper sliders, mobile-first navigation, scroll reveal animations.  
 > Sweet code, sweeter design.
 
+<p align="center">
+  <img src="https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white" alt="HTML5"/>
+  <img src="https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white" alt="CSS3"/>
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black" alt="JavaScript"/>
+  <img src="https://img.shields.io/badge/Swiper-6332F6?logo=swiper&logoColor=white" alt="Swiper"/>
+  <img src="https://img.shields.io/badge/License-MIT-green" alt="MIT License"/>
+</p>
+
 ---
 
 ## 📸 Preview
@@ -52,8 +60,8 @@
 
 ```bash
 # Clone the repo
-git clone https://github.com/YOUR_USERNAME/sugar-rush.git
-cd sugar-rush
+git clone https://github.com/h1chan/Sugar-Rush.git
+cd Sugar-Rush
 
 # Open index.html in browser
 # (or run Live Server in VS Code)
@@ -107,6 +115,8 @@ sugar-rush/
 
 Built following [Bedimcode](https://www.youtube.com/@Bedimcode)'s  
 **"Responsive Cake Website"** tutorial on YouTube.
+
+🎬 [Watch the Demo & Code](https://youtu.be/G6q7AkaljE4?si=rUHEO1V4YMFMVI60)
 
 Original design & tutorial by Bedimcode — thank you for the amazing content!
 
