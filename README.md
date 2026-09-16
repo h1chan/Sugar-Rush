@@ -103,7 +103,7 @@ Sugar-Rush/
 
 ---
 
-## 🎨 Customization — где что менять
+## 🎨 Customization
 
 | What to change | Where to look |
 |----------------|---------------|
