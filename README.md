@@ -1,7 +1,7 @@
 # 🍰 Sugar Rush
 
 > Responsive cake bakery website built following **Bedimcode**'s tutorial.  
-> Vanilla HTML/CSS/JS, Swiper sliders, mobile-first navigation, scroll reveal animations.  
+> Vanilla HTML/CSS/JS, 3 Swiper sliders, ScrollReveal animations, mobile-first navigation.  
 > Sweet code, sweeter design.
 
 <p align="center">
@@ -29,30 +29,46 @@
 
 ---
 
-
 ## ✨ Features
 
-- **Fully Responsive** — mobile-first, breakpoints at 1150px, 2K+
-- **Swiper Sliders** — home cakes carousel, products, new arrivals
-- **Smooth Animations** — ScrollReveal on scroll, CSS transitions
-- **Mobile Hamburger Menu** — slide-in nav with overlay
-- **CSS Custom Properties** — theming, responsive typography
+- **Fully Responsive** — mobile-first, modern range syntax: `<=360px`, `>=540px`, `>=768px`, `<=1150px`, `>=1150px`, `>=2048px` (2K via `zoom: 120%`)
+- **3 Swiper Sliders** — home hero (creative effect + autoplay 3s), products (tabs + thumbs sync), new arrivals (creative + arrows + autoplay)
+- **ScrollReveal Animations** — `origin: bottom, distance: 60px, duration: 1500`, per-section reveals (`main.js` → `sr.reveal`)
+- **Scroll-Up Button** — appears after 350px of scroll
+- **Active Nav Links** — menu item highlights as you scroll through sections
+- **Mobile Hamburger Menu** — slide-in panel, auto-closes on link click
+- **Contact + Map** — order section with embedded Google Maps
+- **Full Footer** — links, socials, blob decor
+- **CSS Custom Properties** — full theme in `:root` (`styles.css`), type scale grows at `>=1150px`
 - **Vanilla Stack** — zero frameworks, no build step
-- **Accessible** — semantic HTML, ARIA labels, focus states
+
+---
+
+## 🍰 Sections & Content
+
+| Section | Anchor | What's inside (`index.html`) |
+|---------|--------|------------------------------|
+| Home | `#home` | Hero title, description, order CTA, cake carousel (4 cakes) |
+| About | `#about` | Passion-for-baking story, cupcakes, photo |
+| Products | `#product` | 5 tab categories × 3 cakes: Strawberry, Vanilla, Chocolate, Dried fruit, Others |
+| New | `#new` | New creations slider with arrows (5 cakes) |
+| Contact | `#contact` | Order CTA, address/phones, WhatsApp/Messenger links, map embed |
+
+Plus: slide-in header nav, footer, scroll-up button.
 
 ---
 
 ## 🛠 Tech Stack
 
-| Technology | Purpose |
-|------------|---------|
-| HTML5 | Semantic markup |
-| CSS3 | Custom properties, Grid, Flexbox, Animations |
-| JavaScript (ES6+) | DOM, Swiper init, ScrollReveal, Menu logic |
-| [Swiper](https://swiperjs.com/) | Touch sliders |
-| [ScrollReveal](https://scrollrevealjs.org/) | Scroll animations |
-| [Remixicon](https://remixicon.com/) | Icon font |
-| [Google Fonts](https://fonts.google.com/) | Montserrat, Pacifico |
+| Technology | Version / Details | Where |
+|------------|-------------------|-------|
+| HTML5 | Semantic markup | `index.html` |
+| CSS3 | Custom properties, Grid, Flexbox, animations | `assets/css/styles.css` |
+| JavaScript (ES6+) | DOM, Swipers, ScrollReveal, menu/scroll logic | `assets/js/main.js` |
+| [Swiper](https://swiperjs.com/) | 12 via jsDelivr | `home__swiper`, `product__tabs` + `product__content`, `new__swiper` |
+| [ScrollReveal](https://scrollrevealjs.org/) | 4.0.9 via cdnjs | `sr = ScrollReveal({...})` in `main.js` |
+| [Remixicon](https://remixicon.com/) | 4.9.0 via jsDelivr | Menu, contact, footer, scroll-up icons |
+| [Google Fonts](https://fonts.google.com/) | Montserrat + Pacifico, via `@import` in CSS | `--body-font`, `--second-font` |
 
 ---
 
@@ -74,39 +90,46 @@ No `npm install`, `build`, or dependencies — pure frontend.
 ## 📁 Project Structure
 
 ```
-sugar-rush/
-├── index.html           # Entry point
+Sugar-Rush/
+├── index.html           # Entry point (Home · About · Products · New · Contact)
 ├── assets/
 │   ├── css/
-│   │   └── styles.css   # All styles
+│   │   └── styles.css   # All styles (~1260 lines)
 │   ├── js/
-│   │   └── main.js      # All logic
-│   └── img/             # Images, SVGs, favicons
+│   │   └── main.js      # Menu, sliders, reveal, scroll (~180 lines)
+│   └── img/             # Cakes (home/products/new), blobs, stickers, leaves, logo
 └── README.md
 ```
 
 ---
 
-## 🎨 Customization
+## 🎨 Customization — где что менять
 
 | What to change | Where to look |
 |----------------|---------------|
-| Brand colors | `:root` in `styles.css` (`--first-color`, `--second-color`...) |
-| Fonts | `@import` in `styles.css` + `--body-font`, `--second-font` |
-| Content | `index.html` (texts, links, images) |
-| Animations | `main.js` → ScrollReveal config |
-| Sliders | `main.js` → Swiper configs |
+| Brand colors | `:root` in `styles.css` (`--first-color`, `--second-color`, `--body-color`...) |
+| Fonts | `@import` at top of `styles.css` + `--body-font`, `--second-font` |
+| Cakes & prices | `index.html` → `product__card` blocks |
+| Hero slider | `main.js` → `home__swiper` (effect, `speed`, `autoplay.delay`) |
+| Products tabs | `main.js` → `swiperTabs` + `swiperProducts` (thumbs sync) |
+| New arrivals slider | `main.js` → `new__swiper` (navigation arrows, autoplay) |
+| Scroll animations | `main.js` → `ScrollReveal({...})` + `sr.reveal(...)` per section |
+| Scroll-up trigger | `main.js` → `scrollUp` (`scrollY >= 350`) |
+| Header shadow trigger | `main.js` → `scrollHeader` (`scrollY >= 50`) |
+| Map location | `index.html` → contact `<iframe>` embed URL |
 
 ---
 
 ## 📱 Responsive Breakpoints
 
 ```css
-/* Mobile First → */
-@media (width <= 1150px)  { /* Tablet / Mobile menu */ }
-@media (width >= 1150px)  { /* Desktop */ }
-@media (width >= 1440px)  { /* Large desktop */ }
-@media (width >= 2560px)  { /* 2K+ */ }
+/* Mobile First, range syntax → */
+@media (width <= 360px)  { /* Small phones */ }
+@media (width >= 540px)  { /* Grids lock to 400px centered columns */ }
+@media (width >= 768px)  { /* Products go 2-column, footer blob grows */ }
+@media (width <= 1150px) { /* Tablet / mobile slide-in menu */ }
+@media (width >= 1150px) { /* Desktop layout + larger type scale */ }
+@media (width >= 2048px) { /* 2K: body zoom 120% */ }
 ```
 
 ---
